@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bevel-corners-gradients</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 400px;
+            height: 200px;
+            background: #58a;/* 保证回退 */
+            margin: 30px;
+            position: relative;
+            left: 50%;/*需要先给元素设置position才能使用left*/
+            margin-left: -200px;
+        }
+        .bevel-corner-1{
+            background: linear-gradient(-45deg,
+                          transparent 15px, #58a 0);
+        }
+        .bevel-corner-2{
+            background: linear-gradient(-45deg,
+                          transparent 15px, #58a 0) right,
+                        linear-gradient(45deg,
+                          transparent 15px, #655 0) left;
+            background-size: 50% 100%;
+            background-repeat: no-repeat;
+        }
+        .bevel-corner-3{
+            background: linear-gradient(135deg,
+                          transparent 15px, #58a 0) top left,
+                        linear-gradient(-135deg,
+                          transparent 15px, #58a 0) top right,
+                        linear-gradient(-45deg,
+                          transparent 15px, #58a 0) bottom right,
+                        linear-gradient(45deg,
+                          transparent 15px, #58a 0) bottom left;
+
+            background-size: 50% 50%;
+            background-repeat: no-repeat;
+        }
+        .bevel-corner-4{
+            background: radial-gradient(circle at top left,
+                          transparent 15px, #58a 0) top left,
+                        radial-gradient(circle at top right,
+                          transparent 15px, #58a 0) top right,
+                        radial-gradient(circle at bottom right,
+                          transparent 15px, #58a 0) bottom right,
+                        radial-gradient(circle at bottom left,
+                          transparent 15px, #58a 0) bottom left;
+            background-size: 50% 50%;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+     <div class="bevel-corner-1"></div>
+     <div class="bevel-corner-2"></div>
+     <div class="bevel-corner-3"></div>
+     <div class="bevel-corner-4"></div>
+</body>
+</html>

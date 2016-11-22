@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bevel corners try</title>
+    <style>
+        body,h2{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            color: #fff;
+            font-size: 16px;
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            background-image: url(imgs/header.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        header{
+            margin-top: 30px;
+        }
+        h1{
+            display: block;
+            color: rgba(255,255,255,.8);
+            font-size: 5rem;
+            font-family: Helvetica, 'Arial', sans-serif;
+            letter-spacing: 25px;
+            text-align: center;
+            clear: both;
+            padding: 30px;
+            margin-left: -100px;
+        }
+        .right, .left{
+            width: 400px;
+            background: #58a;
+            padding: 30px;
+        }
+        .left{
+            background: linear-gradient(135deg,
+                          transparent 0, #58a 0) top left,
+                        linear-gradient(-135deg,
+                          transparent 15px, #58a 0) top right,
+                        linear-gradient(-45deg,
+                          transparent 15px, #58a 0) bottom right,
+                        linear-gradient(45deg,
+                          transparent 0, #58a 0) bottom left;
+            background-size: 50% 51%;
+            background-repeat: no-repeat;
+            float: left;
+        }
+        .right{
+            background: linear-gradient(135deg,
+                          transparent 15px, #58a 0) top left,
+                        linear-gradient(-135deg,
+                          transparent 0, #58a 0) top right,
+                        linear-gradient(-45deg,
+                          transparent 0, #58a 0) bottom right,
+                        linear-gradient(45deg,
+                          transparent 15px, #58a 0) bottom left;
+            background-size: 50% 51%;
+            background-repeat: no-repeat;
+            float: right;
+        }
+        .right li, .left li{
+            list-style: none;
+            float: left;
+        }
+        .add:before,.add:after{
+            color: #fff;
+            content: '|';
+            padding: 30px;
+        }
+        .content{
+            background: #58a;
+            background: linear-gradient(135deg,
+                          transparent 15px, #58a 0) top left,
+                        linear-gradient(-135deg,
+                          transparent 15px, #58a 0) top right,
+                        linear-gradient(-45deg,
+                          transparent 15px, #58a 0) bottom right,
+                        linear-gradient(45deg,
+                          transparent 15px, #58a 0) bottom left;
+            background-size: 50% 51%;
+            background-repeat: no-repeat;
+            width: 400px;
+            padding: 10px 30px;
+            margin: 30px auto;
+            margin-top: -120px;
+        }
+        .content h2{
+            color: #000;
+         }
+        .content p{
+            text-align: left;
+            font-size: .8rem;
+        }
+        footer{
+            margin-top: 115px;
+        }
+        footer h2{
+            display: inline-block;
+            color: #58a;
+            background: #fff;
+            padding: 11px 20px;
+            margin-left: 20%;
+        }
+        .footer-right{
+            width: 60%;
+            background: #58a;
+            padding: 0 20px;
+            float: right;
+        }
+        .footer-right p{
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .footer-right input{
+            padding: 2px 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <ul class="left">
+        <li>HOME</li>
+        <li class="add">MENU</li>
+        <li>EVENT</li>
+    </ul>
+    <ul class="right">
+        <li>PARTY ROOM</li>
+        <li class="add">ABOUT</li>
+        <li>CONTANT</li>
+    </ul>
+    </header>
+    <section>
+        <h1>FRESH</h1>
+        <div class="content">
+            <h2>Welcome.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.</p>
+            <p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <p>Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. </p>
+        </div>
+    </section>
+    <footer>
+        <h2>Lorem ipsum</h2>
+        <div class="footer-right">
+            <p>Fusce posuere, magna sed pulvinar ultricies.</p>
+            <input type="text" name="in" value="input something..." />
+            <input type="button" name="sm" value="submit">
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stripes</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 600px;
+            height: 500px;
+            margin: 30px auto;
+        }
+        p{
+            text-align: center;
+        }
+        .horizontal-stripes-1{
+            background: linear-gradient(#fb3 50%,#58a 50%);
+            background-size: 100% 45px;
+        }
+        .horizontal-stripes-2{
+            background: linear-gradient(#fb3 33.3%, #58a 0, #58a 66.6%, yellowgreen 0);
+            background-size: 100% 45px;
+        }
+        .vertical-stripes{
+            background: linear-gradient(to right, #fb3 50%, #58a 0);
+            background-size: 30px 100%;/*这里跟水平方向条纹的参数位置相反*/
+        }
+        .diagonal-stripes{
+            background: linear-gradient(45deg,
+                        #fb3 25%, #58a 0, #58a 50%,
+                        #fb3 0, #fb3 75%, #58a 0);
+            background-size: 30px 30px;
+        }
+        .diagonal-stripes-better{
+            background: repeating-linear-gradient(45deg,
+                        #fb3,#fb3 15px, #58a 0, #58a 30px);
+        }
+        .diagonal-stripes-another{/*这种方法保证了回退*/
+            background: #58a;
+            background-image: repeating-linear-gradient(45deg,
+                             hsla(0,0%,100%,.2),hsla(0,0%,100%,.2) 15px,
+                             transparent 0, transparent 30px);
+        }
+    </style>
+</head>
+<body>
+    <div class="horizontal-stripes-1"></div>
+    <p>横向条纹-1</p>
+    <div class="horizontal-stripes-2"></div>
+    <p>横向条纹-2</p>
+    <div class="vertical-stripes"></div>
+    <p>竖向条纹</p>
+    <div class="diagonal-stripes"></div>
+    <p>斜向条纹</p>
+    <div class="diagonal-stripes-better"></div>
+    <p>更好的斜向条纹</p>
+    <div class="diagonal-stripes-another"></div>
+    <p>另一种实现方法</p>
+</body>
+</html>

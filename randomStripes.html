@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>randomStripes</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 600px;
+            height: 500px;
+            margin: 30px auto;
+        }
+        p{
+            text-align: center;
+        }
+        .stripes-1{
+            background: hsl(20,40%,90%);
+            background-image: linear-gradient(90deg, #fb3 10px, transparent 0),
+                              linear-gradient(90deg, #ab4 20px, transparent 0),
+                              linear-gradient(90deg, #655 20px, transparent 0);
+            background-size: 80px 100%, 60px 100%, 40px 100%;
+        }
+        .stripes-2{/*使用质数提高随机性*/
+            background: hsl(20,40%,90%);
+            background-image: linear-gradient(90deg, #fb3 11px, transparent 0),
+                              linear-gradient(90deg, #ab4 23px, transparent 0),
+                              linear-gradient(90deg, #655 41px, transparent 0);
+            background-size: 41px 100%, 61px 100%, 83px 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="stripes-1"></div>
+    <p>伪随机条纹-1</p>
+    <div class="stripes-2"></div>
+    <p>伪随机条纹-2</p>
+</body>
+</html>

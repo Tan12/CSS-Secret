@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>patterns</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 600px;
+            height: 500px;
+            margin: 30px auto;
+        }
+        p{
+            text-align: center;
+        }
+        .grid-1{
+            background: white;
+            background-image: linear-gradient(90deg,
+                                  rgba(200,0,0,.5) 50%, transparent 0),
+                              linear-gradient(rgba(200,0,0,.5) 50%, transparent 0);
+            background-size: 30px 30px;
+        }
+        .grid-2{
+            background: #58a;
+            background-image: linear-gradient(90deg,white 1px, transparent 0),
+                              linear-gradient(white 1px, transparent 0);
+            background-size: 30px 30px;
+        }
+        .grid-3{
+            background: #58a;
+            background-image: linear-gradient(white 2px, transparent 0),
+                              linear-gradient(90deg, white 2px, transparent 0),
+                              linear-gradient(hsla(0,0%,100%,.3) 1px,
+                                  transparent 0),
+                              linear-gradient(90deg, hsla(0,0%,100%,.3) 1px,
+                                  transparent 0);
+            background-size: 75px 75px, 75px 75px,
+                             15px 15px, 15px 15px;
+        }
+        .polka-1{
+            background: #655;
+            background-image: radial-gradient(tan 30%, transparent 0);
+            background-size: 30px 30px;
+        }
+        .polka-2{
+            background: #655;
+            background-image: radial-gradient(tan 30%, transparent 0),
+                              radial-gradient(tan 30%, transparent 0);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;/*偏移定位置必须是贴片宽高的一半*/
+        }
+        .checkerboard{
+            background: #eee;
+            background-image: linear-gradient(45deg, #bbb 25%, transparent 0),
+                              linear-gradient(45deg, transparent 75%, #bbb 0),
+                              linear-gradient(45deg, #bbb 25%, transparent 0),
+                              linear-gradient(45deg, transparent 75%, #bbb 0);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px, 15px 15px, 30px 30px;
+        }
+        .checkerboard-improve{
+            background: #eee;
+            background-image: linear-gradient(45deg,
+                                  rgba(0,0,0,.25) 25%, transparent 0,
+                                  transparent 75%, rgba(0,0,0,.25) 0),
+                              linear-gradient(45deg,
+                                  rgba(0,0,0,.25) 25%, transparent 0,
+                                  transparent 75%, rgba(0,0,0,.25) 0);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+    </style>
+</head>
+<body>
+    <!--CSS3图案库：lea.verou.me/css3patterns-->
+    <!--CSS3图案的SVG版实现：philbit.com/svgpatterns-->
+    <div class="grid-1"></div>
+    <p>网格-1</p>
+    <div class="grid-2"></div>
+    <p>网格-2</p>
+    <div class="grid-3"></div>
+    <p>网格-3</p>
+    <div class="polka-1"></div>
+    <p>波点-1</p>
+    <div class="polka-2"></div>
+    <p>波点-2</p>
+    <div class="checkerboard"></div>
+    <p>棋盘</p>
+    <div class="checkerboard-improve"></div>
+    <p>棋盘改进版</p>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>continuous-image-borders</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 600px;
+            margin: 30px auto;
+        }
+        p{
+            text-indent: 1em;
+        }
+        .something-meaningful{
+            background: linear-gradient(white, white) padding-box, url(imgs/post-3.jpg) border-box 0 / cover;
+            padding: 1em;
+            border: 1em solid transparent;
+        }
+        .something-meaningful > p{
+            background: white;
+            padding: 1em;
+        }
+        .envelope{
+            padding: 1em;
+            border: 1em solid transparent;
+            background: linear-gradient(white,white) padding-box,
+                        repeating-linear-gradient(-45deg,
+                            red 0, red 12.5%,
+                            transparent 0, transparent 25%,
+                            #58a 0, #58a 37.5%,
+                            transparent 0, transparent 50%)
+                        0 / 5em 5em;
+        }
+
+        @keyframes ants {
+            to{
+                background-position: 100%;
+            }
+        }
+        .marching-ants{
+            padding: 1em;
+            border: 1px solid transparent;
+            background: linear-gradient(white,white) padding-box,
+                        repeating-linear-gradient(-45deg,
+                            black 0, black 25%,
+                            white 0, white 50%)
+                        0 / .6em .6em;
+            animation: ants 12s linear infinite;
+        }
+
+        .footnote{
+            border-top: .2em solid transparent;
+            border-image: 100% 0 0 linear-gradient(90deg,
+                                       currentColor 4em,
+                                       transparent 0);
+            padding-top: .5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="something-meaningful">
+        <p>I have a nice pencil art border, don't I look pretty? Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
+    </div>
+    <div class="envelope">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.</p>
+    </div>
+    <div class="marching-ants">
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.</p>
+    </div>
+    <div class="footnote">
+        <p>This is a footnote</p>
+    </div>
+</body>
+</html>

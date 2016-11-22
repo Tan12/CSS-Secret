@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>half ellipse</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            background: #fb3;
+            width: 200px;
+            height: 200px;
+            margin: 30px 60px;
+            display: inline-block;
+        }
+        .half-ellipse-1{
+            border-radius: 50% / 100% 100% 0 0;
+        }
+        .half-ellipse-2{
+            border-radius: 100% 0 0 100% / 50%;
+        }
+        .half-ellipse-3{
+            border-radius: 0 100% 100% 0 / 50%;
+        }
+        .half-ellipse-4{
+            border-radius: 50% / 0 0 100% 100%;
+        }
+        .quarter-ellipse{
+            border-radius: 100% 0 0 0;
+        }
+        /* 糖果按钮：http://simurai.com/archive/buttons */
+    </style>
+</head>
+<body>
+    <div class="half-ellipse-1"></div>
+    <div class="half-ellipse-2"></div>
+    <div class="half-ellipse-3"></div>
+    <div class="half-ellipse-4"></div>
+    <div class="quarter-ellipse"></div>
+</body>
+</html>

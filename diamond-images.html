@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>diamond images</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 300px;
+            margin: 200px auto;
+        }
+        .picture{
+            transform: rotate(45deg);
+            overflow: hidden;
+        }
+        .picture > img{
+            max-width: 100%;
+            transform: rotate(-45deg) scale(1.42);
+        }
+        .picture-2 > img{
+            -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+            clip-path: polygon(50% 0, 100% 50, 50% 100%, 0 50%);
+            transition: 1s clip-path;
+        }
+        .picture-2 > img:hover{
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+        .picture-3{
+            width: 600px;
+            -webkit-clip-path: polygon(0 100%, 50% 0, 100% 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="picture">
+        <img src="imgs/02.jpg" alt="02" />
+    </div>
+    <div class="picture-2">
+        <img src="imgs/02.jpg" alt="02" />
+    </div>
+    <div class="picture-3">
+        <img src="imgs/post-3.jpg" alt="post-3" />
+    </div>
+</body>
+</html>
