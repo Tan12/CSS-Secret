@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>color tint filter</title>
+    <style>
+        img.filter{
+            transition: .5s filter;
+            filter: sepia(1) saturate(4) hue-rotate(295deg);
+        }
+        img.filter:hover,
+        img.filter:focus{
+            filter: none;
+        }
+        body, main::before{
+            background: url("imgs/post-3.jpg") 0 / cover fixed;
+        }
+        main{
+            width: 500px;
+            height: 250px;
+            padding: 10px;
+            margin-top: 50px;
+            font-size: 1.2em;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5em;
+            background: hsla(0, 0%, 100%, .3);
+            position: relative;
+        }
+        main::before{
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            filter: blur(20px);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <img class="filter" src="imgs/02.jpg" />
+
+    <main>
+        <blockquote>
+            I hope you love Font Awesome. If you've found it useful, please do me a favor and check out my latest project,
+            Fort Awesome (https://fortawesome.com). It makes it easy to put the perfect icons on your website. Choose from our awesome,
+            comprehensive icon sets or copy and paste your own.
+            Please. Check it out.
+            <footer>-
+                <cite>Dave Gandy</cite>
+            </footer>
+
+        </blockquote>
+    </main>
+</body>
+</html>
